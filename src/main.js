@@ -64,7 +64,7 @@ function startSignalLoadingText(titleEl, subEl) {
 }
 
 function injectGlobalFixStyles() {
-    const id = "GTPO-fix-styles-v3";
+    const id = "jogoto-fix-styles-v3";
     if (document.getElementById(id)) return;
 
     const style = document.createElement("style");
@@ -203,19 +203,27 @@ const I18N = {
             items: [
                 {
                     q: "How does the bot generate signals?",
-                    a: `<p>GTPO analyzes market data and keeps only setups that pass risk and entry-quality filters.</p>`,
+                    a: `
+            <p>GTPO analyzes market data and keeps only setups that pass risk and entry-quality filters.</p>
+          `,
                 },
                 {
                     q: "What does VIP status give in the mini app?",
-                    a: `<p>VIP unlocks more sensitive cores and additional filters.</p>`,
+                    a: `
+            <p>VIP unlocks more sensitive cores and additional filters.</p>
+          `,
                 },
                 {
                     q: "Is this safe for my deposit?",
-                    a: `<p>The bot doesn’t have access to your account. Still, trading involves risk.</p>`,
+                    a: `
+            <p>The bot doesn’t have access to your account. Still, trading involves risk.</p>
+          `,
                 },
                 {
                     q: "Do I need trading experience to use the bot?",
-                    a: `<p>Signals are simplified: “asset → direction → expiry → risk”.</p>`,
+                    a: `
+            <p>Signals are simplified: “asset → direction → expiry → risk”.</p>
+          `,
                 },
             ],
         },
@@ -230,7 +238,8 @@ const I18N = {
         },
         picker: {
             pairTitle: "Currency pair",
-            pairSubtitle: "All Pocket Option assets: currencies, crypto, commodities, stocks and indices.",
+            pairSubtitle:
+                "All Pocket Option assets: currencies, crypto, commodities, stocks and indices.",
             timeTitle: "Expiry time",
             timeSubtitle: "Pick the horizon the models were trained for.",
             modelTitle: "AI model",
@@ -252,7 +261,8 @@ const I18N = {
                 orion: "Scans trend strength and micro pullbacks.",
                 mega: "Finds impulses, volume clusters and liquidity sweeps.",
                 atlas: "Builds risk profile and filters emotional trades.",
-                unity: "Accounts for news, corrects after mistakes and adapts trading to the user.",
+                unity:
+                    "Accounts for news, corrects after mistakes and adapts trading to the user.",
             },
         },
         analyzer: {
@@ -260,8 +270,10 @@ const I18N = {
             statusIdle: "Waiting for parameters",
             statusActive: "Analyzing…",
             statusDone: "Signal prepared",
-            idleLine1: "Select pair, expiry and AI model to see how GTPO core reacts.",
-            idleLine2: "The analyzer always shows which patterns the engine is focusing on.",
+            idleLine1:
+                "Select pair, expiry and AI model to see how GTPO core reacts.",
+            idleLine2:
+                "The analyzer always shows which patterns the engine is focusing on.",
             modelLines: {
                 orion: [
                     "Scans trend strength and micro pullbacks on the selected asset.",
@@ -295,7 +307,8 @@ const I18N = {
             riskLow: "Low",
             riskMedium: "Medium",
             riskHigh: "High",
-            note: "Open Pocket Option, copy pair, direction and expiry and keep risk per trade within your plan.",
+            note:
+                "Open Pocket Option, copy pair, direction and expiry and keep risk per trade within your plan.",
             backToForm: "Back to form",
             repeat: "Repeat",
             loadingPairs: [
@@ -324,7 +337,8 @@ const I18N = {
                     id: "models",
                     label: "VIP AI-МОДЕЛИ",
                     title: "Orion, Mega, Atlas и Unity",
-                    text: "Как устроены ядра, откуда берутся данные и чем VIP-режим отличается от базового.",
+                    text:
+                        "Как устроены ядра, откуда берутся данные и чем VIP-режим отличается от базового.",
                     modalTag: "VIP AI",
                     modalTitle: "Orion, Mega, Atlas и Unity — ядра генерации",
                     modalHtml: `
@@ -341,7 +355,8 @@ const I18N = {
                     id: "bot",
                     label: "КАК УСТРОЕН БОТ",
                     title: "Архитектура GTPO Trading Core",
-                    text: "Отфильтрованные сигналы, риск-менеджмент и защита от шумовых сделок.",
+                    text:
+                        "Отфильтрованные сигналы, риск-менеджмент и защита от шумовых сделок.",
                     modalTag: "ПОЧЕМУ НАШ БОТ",
                     modalTitle: "GTPO Trading Core — серверное ядро мини-бота",
                     modalHtml: `
@@ -357,7 +372,8 @@ const I18N = {
                     id: "pocket",
                     label: "POCKET OPTION",
                     title: "Фокус на одной бирже",
-                    text: "Почему мы выбрали Pocket Option и как AI подстраивается под её ликвидность.",
+                    text:
+                        "Почему мы выбрали Pocket Option и как AI подстраивается под её ликвидность.",
                     modalTag: "ПОЧЕМУ POCKET OPTION",
                     modalTitle: "Специализация на одной бирже вместо десятка поверхностных",
                     modalHtml: `
@@ -369,10 +385,30 @@ const I18N = {
         faq: {
             title: "FAQ",
             items: [
-                { q: "Как бот генерирует сигналы?", a: `<p>GTPO анализирует рынок и оставляет только те сетапы, которые прошли фильтры по риску и качеству входа.</p>` },
-                { q: "Что даёт VIP-статус в мини-апп?", a: `<p>VIP открывает доступ к дополнительным ядрам и более тонким фильтрам.</p>` },
-                { q: "Насколько это безопасно для депозита?", a: `<p>Бот не имеет доступа к вашему счёту и не совершает сделки за вас. Любая торговля связана с риском.</p>` },
-                { q: "Нужен ли опыт в трейдинге?", a: `<p>Сигналы подаются просто: «актив → направление → экспирация → риск».</p>` },
+                {
+                    q: "Как бот генерирует сигналы?",
+                    a: `
+            <p>GTPO анализирует рынок и оставляет только те сетапы, которые прошли фильтры по риску и качеству входа.</p>
+          `,
+                },
+                {
+                    q: "Что даёт VIP-статус в мини-апп?",
+                    a: `
+            <p>VIP открывает доступ к дополнительным ядрам и более тонким фильтрам.</p>
+          `,
+                },
+                {
+                    q: "Насколько это безопасно для депозита?",
+                    a: `
+            <p>Бот не имеет доступа к вашему счёту и не совершает сделки за вас. Любая торговля связана с риском.</p>
+          `,
+                },
+                {
+                    q: "Нужен ли опыт в трейдинге?",
+                    a: `
+            <p>Сигналы подаются просто: «актив → направление → экспирация → риск».</p>
+          `,
+                },
             ],
         },
         trading: {
@@ -386,7 +422,8 @@ const I18N = {
         },
         picker: {
             pairTitle: "Валютная пара",
-            pairSubtitle: "Все активы Pocket Option: валюты, крипто, сырьё, акции и индексы.",
+            pairSubtitle:
+                "Все активы Pocket Option: валюты, крипто, сырьё, акции и индексы.",
             timeTitle: "Время экспирации",
             timeSubtitle: "Выберите таймфрейм, под который обучались модели.",
             modelTitle: "AI-модель",
@@ -408,7 +445,8 @@ const I18N = {
                 orion: "Сканирует силу тренда и микрокоррекции по активу.",
                 mega: "Ищет импульсы, кластеры объёма и выносы ликвидности.",
                 atlas: "Строит риск-профиль и отсекает эмоциональные входы.",
-                unity: "Учитывает новости, корректирует алгоритмы после ошибок и адаптирует торговлю под пользователя",
+                unity:
+                    "Учитывает новости, корректирует алгоритмы после ошибок и адаптирует торговлю под пользователя",
             },
         },
         analyzer: {
@@ -416,8 +454,10 @@ const I18N = {
             statusIdle: "Ждём параметры",
             statusActive: "Идёт анализ…",
             statusDone: "Сигнал готов",
-            idleLine1: "Выберите актив, экспирацию и AI-модель — покажем, как реагирует ядро.",
-            idleLine2: "Анализатор показывает, на какие паттерны сейчас смотрит система.",
+            idleLine1:
+                "Выберите актив, экспирацию и AI-модель — покажем, как реагирует ядро.",
+            idleLine2:
+                "Анализатор показывает, на какие паттерны сейчас смотрит система.",
             modelLines: {
                 orion: [
                     "Сканирует силу тренда и микрокоррекции по выбранному активу.",
@@ -451,7 +491,8 @@ const I18N = {
             riskLow: "Низкий",
             riskMedium: "Средний",
             riskHigh: "Высокий",
-            note: "Открой Pocket Option, скопируй актив, направление и экспирацию и держи риск на сделку в рамках своего плана.",
+            note:
+                "Открой Pocket Option, скопируй актив, направление и экспирацию и держи риск на сделку в рамках своего плана.",
             backToForm: "Назад к форме",
             repeat: "Повторить",
             loadingPairs: [
@@ -483,7 +524,9 @@ const I18N = {
                     text: "Modelos, datos y diferencia entre VIP y básico.",
                     modalTag: "VIP AI",
                     modalTitle: "Cores: Orion, Mega, Atlas y Unity",
-                    modalHtml: `<p>VIP desbloquea cores adicionales y filtros.</p>`,
+                    modalHtml: `
+            <p>VIP desbloquea cores adicionales y filtros.</p>
+          `,
                 },
                 {
                     id: "bot",
@@ -492,7 +535,9 @@ const I18N = {
                     text: "Señales filtradas, gestión de riesgo y protección contra ruido.",
                     modalTag: "POR QUÉ NUESTRO BOT",
                     modalTitle: "GTPO Trading Core — motor del mini-bot",
-                    modalHtml: `<p>Recibe precios y descarta lo que no pasa filtros.</p>`,
+                    modalHtml: `
+            <p>Recibe precios y descarta lo que no pasa filtros.</p>
+          `,
                 },
                 {
                     id: "pocket",
@@ -525,7 +570,8 @@ const I18N = {
         },
         picker: {
             pairTitle: "Par de divisas",
-            pairSubtitle: "Todos los activos de Pocket Option: divisas, cripto, materias primas, acciones e índices.",
+            pairSubtitle:
+                "Todos los activos de Pocket Option: divisas, cripto, materias primas, acciones e índices.",
             timeTitle: "Tiempo de expiración",
             timeSubtitle: "Elige el marco temporal para el que se entrenaron los modelos.",
             modelTitle: "Modelo AI",
@@ -547,7 +593,8 @@ const I18N = {
                 orion: "Escanea tendencia y micro retrocesos.",
                 mega: "Impulsos, clusters de volumen y barridos de liquidez.",
                 atlas: "Perfil de riesgo y filtros de disciplina.",
-                unity: "Cuenta noticias, corrige tras errores y adapta al usuario.",
+                unity:
+                    "Cuenta noticias, corrige tras errores y adapta al usuario.",
             },
         },
         analyzer: {
@@ -578,7 +625,8 @@ const I18N = {
             riskLow: "Bajo",
             riskMedium: "Medio",
             riskHigh: "Alto",
-            note: "Abre Pocket Option, copia activo, dirección y expiración y mantén el riesgo por operación dentro de tu plan.",
+            note:
+                "Abre Pocket Option, copia activo, dirección y expiración y mantén el riesgo por operación dentro de tu plan.",
             backToForm: "Volver",
             repeat: "Repetir",
             loadingPairs: [
@@ -603,9 +651,33 @@ const I18N = {
         info: {
             title: "GTPO AI",
             cards: [
-                { id: "models", label: "VIP AI मॉडल", title: "Orion, Mega, Atlas, Unity", text: "VIP में extra cores और filters.", modalTag: "VIP AI", modalTitle: "Trading cores", modalHtml: `<p>VIP unlocks more cores & filters.</p>` },
-                { id: "bot", label: "BOT कैसे काम करता है", title: "GTPO Trading Core", text: "Filtered signals, risk-management.", modalTag: "WHY", modalTitle: "Core engine", modalHtml: `<p>Price stream -> filters -> signal.</p>` },
-                { id: "pocket", label: "POCKET OPTION", title: "एक broker पर focus", text: "Pocket Option specialization.", modalTag: "POCKET", modalTitle: "Deep focus", modalHtml: `<p>Better modeling & stability.</p>` },
+                {
+                    id: "models",
+                    label: "VIP AI मॉडल",
+                    title: "Orion, Mega, Atlas, Unity",
+                    text: "VIP में extra cores और filters.",
+                    modalTag: "VIP AI",
+                    modalTitle: "Trading cores",
+                    modalHtml: `<p>VIP unlocks more cores & filters.</p>`,
+                },
+                {
+                    id: "bot",
+                    label: "BOT कैसे काम करता है",
+                    title: "GTPO Trading Core",
+                    text: "Filtered signals, risk-management.",
+                    modalTag: "WHY",
+                    modalTitle: "Core engine",
+                    modalHtml: `<p>Price stream -> filters -> signal.</p>`,
+                },
+                {
+                    id: "pocket",
+                    label: "POCKET OPTION",
+                    title: "एक broker पर focus",
+                    text: "Pocket Option specialization.",
+                    modalTag: "POCKET",
+                    modalTitle: "Deep focus",
+                    modalHtml: `<p>Better modeling & stability.</p>`,
+                },
             ],
         },
         faq: {
@@ -628,7 +700,8 @@ const I18N = {
         },
         picker: {
             pairTitle: "करेंसी pair",
-            pairSubtitle: "Pocket Option के सारे assets: forex, crypto, commodities, stocks, indices.",
+            pairSubtitle:
+                "Pocket Option के सारे assets: forex, crypto, commodities, stocks, indices.",
             timeTitle: "Expiry time",
             timeSubtitle: "Timeframe चुनें जिस पर models train हुए हैं।",
             modelTitle: "AI मॉडल",
@@ -681,7 +754,8 @@ const I18N = {
             riskLow: "Low",
             riskMedium: "Medium",
             riskHigh: "High",
-            note: "Pocket Option खोलो, pair, direction और expiry copy करो और प्रति trade risk अपने प्लान में रखो।",
+            note:
+                "Pocket Option खोलो, pair, direction और expiry copy करो और प्रति trade risk अपने प्लान में रखो।",
             backToForm: "वापस",
             repeat: "Repeat",
             loadingPairs: [
@@ -717,10 +791,10 @@ function applyLanguage() {
         else el.textContent = val;
     });
 
-    if (window.GTPOInfoCardsUpdate) window.GTPOInfoCardsUpdate();
-    if (window.GTPOFaqUpdate) window.GTPOFaqUpdate();
-    if (window.GTPOFavoritesUpdate) window.GTPOFavoritesUpdate();
-    if (window.GTPOTradingLangUpdate) window.GTPOTradingLangUpdate();
+    if (window.jogotoInfoCardsUpdate) window.jogotoInfoCardsUpdate();
+    if (window.jogotoFaqUpdate) window.jogotoFaqUpdate();
+    if (window.jogotoFavoritesUpdate) window.jogotoFavoritesUpdate();
+    if (window.jogotoTradingLangUpdate) window.jogotoTradingLangUpdate();
 }
 
 function showVipToast() {
@@ -743,7 +817,7 @@ document.addEventListener("DOMContentLoaded", () => {
     injectGlobalFixStyles();
 
     try {
-        const saved = localStorage.getItem("GTPO_lang");
+        const saved = localStorage.getItem("jogoto_lang");
         if (saved && I18N[saved]) currentLang = saved;
     } catch {}
 
@@ -788,7 +862,7 @@ function setupLanguageSwitcher() {
 
         currentLang = lang;
         try {
-            localStorage.setItem("GTPO_lang", lang);
+            localStorage.setItem("jogoto_lang", lang);
         } catch {}
 
         setActiveByLang(lang);
@@ -1023,7 +1097,7 @@ function setupFavorites() {
     fetchRealPrices();
     setInterval(fetchRealPrices, 30000);
 
-    window.GTPOFavoritesUpdate = () => render();
+    window.jogotoFavoritesUpdate = () => render();
 }
 
 function setupInfoCards() {
@@ -1088,7 +1162,7 @@ function setupInfoCards() {
     }
 
     renderCards();
-    window.GTPOInfoCardsUpdate = renderCards;
+    window.jogotoInfoCardsUpdate = renderCards;
 }
 
 function setupFaqAccordion() {
@@ -1152,7 +1226,7 @@ function setupFaqAccordion() {
     }
 
     renderFaq();
-    window.GTPOFaqUpdate = renderFaq;
+    window.jogotoFaqUpdate = renderFaq;
 }
 
 function setupTradingForm() {
@@ -1355,12 +1429,60 @@ function setupTradingForm() {
         ],
     };
 
-    // ✅ UNLOCK: все пары считаем "доступными" (VIP-блокировки отключены)
-    const BASIC_PAIR_IDS = (() => {
-        const s = new Set();
-        Object.values(CP_DATA).forEach((arr) => arr.forEach((x) => s.add(x.id)));
-        return s;
-    })();
+    const BASIC_PAIR_IDS = new Set([
+        "EUR_USD_OTC",
+        "GBP_USD_OTC",
+        "USD_JPY_OTC",
+        "EUR_GBP_OTC",
+        "AUD_USD_OTC",
+        "EUR_CHF_OTC",
+        "EUR_JPY_OTC",
+        "GBP_JPY_OTC",
+        "USD_CHF_OTC",
+        "AUD_JPY_OTC",
+        "NZD_USD_OTC",
+        "USD_CAD_OTC",
+        "USD_RUB_OTC",
+        "EUR_RUB_OTC",
+        "USD_MXN_OTC",
+        "USD_SGD_OTC",
+
+        "Bitcoin_OTC",
+        "Ethereum_OTC",
+        "Litecoin_OTC",
+        "Avalanche_OTC",
+        "BNB_OTC",
+        "Solana_OTC",
+        "TRON_OTC",
+        "Dogecoin_OTC",
+        "Polkadot_OTC",
+        "Cardano_OTC",
+        "Polygon_OTC",
+        "Toncoin_OTC",
+        "Chainlink_OTC",
+
+        "Gold_OTC",
+        "Silver_OTC",
+        "Brent_Oil_OTC",
+        "WTI_Crude_Oil_OTC",
+        "Natural_Gas_OTC",
+
+        "Apple_OTC",
+        "Tesla_OTC",
+        "Microsoft_OTC",
+        "Amazon_OTC",
+        "Netflix_OTC",
+        "AMD_OTC",
+        "VISA_OTC",
+        "Coinbase_Global_OTC",
+
+        "US100_OTC",
+        "SP500_OTC",
+        "DJI30_OTC",
+        "JPN225_OTC",
+        "AUS_200_OTC",
+        "E35EUR_OTC",
+    ]);
 
     const EXPIRY_PRESETS = [
         { id: "S5", label: "S5", seconds: 5, sub: "Ultra-short scalping" },
@@ -1381,10 +1503,9 @@ function setupTradingForm() {
         { id: "unity", title: "Unity" },
     ];
 
-    // ✅ UNLOCK: все модели доступны
-    const BASIC_MODEL_IDS = new Set(AI_MODELS.map((m) => m.id));
+    const BASIC_MODEL_IDS = new Set(["orion"]);
 
-    const CP_FAV_KEY = "GTPO_pair_favs_v1";
+    const CP_FAV_KEY = "jogoto_pair_favs_v1";
     let favSet;
     try {
         favSet = new Set(JSON.parse(localStorage.getItem(CP_FAV_KEY) || "[]"));
@@ -1787,9 +1908,8 @@ function setupTradingForm() {
         pickerModal.setAttribute("aria-hidden", "false");
         document.body.style.overflow = "hidden";
 
-        // don't automatically focus searchable input on open; allow the user to
-        // tap the search row to activate and show the keyboard. the old behavior
-        // caused the keyboard to pop up immediately on mobile.
+        // don't autofocus the search field on open – mobile keyboards should stay hidden
+        // users can tap the search input when they actually want to search
         // if (cfg.searchable) searchInput.focus();
     }
 
@@ -1803,14 +1923,6 @@ function setupTradingForm() {
     document.addEventListener("keydown", (e) => {
         if (pickerModal.classList.contains("is-open") && e.key === "Escape") closePicker();
     });
-
-    // clicking anywhere on the search row (not just the input) should focus it
-    // so the keyboard appears only when the user explicitly taps the field.
-    if (searchWrap) {
-        searchWrap.addEventListener("click", () => {
-            searchInput.focus();
-        });
-    }
 
     let favToggleBtn;
     (function ensureFavToggle() {
@@ -1892,17 +2004,18 @@ function setupTradingForm() {
 
             items.forEach((item) => {
                 const isOtc = item.market === "OTC";
-                // ✅ VIP блокировки выключены: isVipLocked всегда false
-                const isVipLocked = !BASIC_PAIR_IDS.has(item.id) ? false : false;
-
-                const desc = isOtc ? dict.otcDesc : dict.regDesc;
-                const badgeText = isOtc ? (dict.otcBadge || "OTC") : (dict.regBadge || "REG");
+                const isVipLocked = !BASIC_PAIR_IDS.has(item.id);
+                const desc = isVipLocked
+                    ? dict.vipOnlyDesc
+                    : isOtc
+                        ? dict.otcDesc
+                        : dict.regDesc;
+                const badgeText = isVipLocked ? dict.vipBadge : item.market || dict.regBadge;
 
                 const row = document.createElement("div");
                 row.className = "picker-row";
-                // ❌ больше не делаем disabled по REG, чтобы можно было выбрать всё
-                // if (!isOtc) row.classList.add("picker-row--disabled");
-                // if (isVipLocked) row.classList.add("picker-row--vip-locked");
+                if (!isOtc) row.classList.add("picker-row--disabled");
+                if (isVipLocked) row.classList.add("picker-row--vip-locked");
 
                 const isFav = favSet.has(item.id);
 
@@ -1931,9 +2044,14 @@ function setupTradingForm() {
                 });
 
                 row.addEventListener("click", () => {
-                    // ✅ VIP/REG ограничения сняты — выбираем любой пункт
+                    if (isVipLocked) {
+                        showVipToast();
+                        return;
+                    }
+                    if (!isOtc) return;
+
                     state.pair = item.name;
-                    state.pairMarket = item.market || "";
+                    state.pairMarket = item.market;
                     applyFieldValue("pair", item.name);
                     updateAnalyzerForModel(state.modelId || "orion");
                     closePicker();
@@ -1986,13 +2104,13 @@ function setupTradingForm() {
             const row = document.createElement("div");
             row.className = "picker-row";
 
-            // ✅ VIP блокировки выключены
-            const vipLocked = !BASIC_MODEL_IDS.has(m.id) ? false : false;
-
+            const vipLocked = !BASIC_MODEL_IDS.has(m.id);
             const baseDesc = modelDescDict[m.id] || "";
-            const subText = baseDesc;
+            const subText = vipLocked
+                ? (baseDesc ? `${baseDesc} — ${pickerDict.vipOnlyDesc}` : pickerDict.vipOnlyDesc)
+                : baseDesc;
 
-            // if (vipLocked) row.classList.add("picker-row--vip-locked");
+            if (vipLocked) row.classList.add("picker-row--vip-locked");
 
             const isUnity = m.id === "unity";
             const badgeHtml = isUnity
@@ -2010,7 +2128,10 @@ function setupTradingForm() {
     `;
 
             row.addEventListener("click", () => {
-                // ✅ выбираем любую модель
+                if (vipLocked) {
+                    showVipToast();
+                    return;
+                }
                 state.model = m.title;
                 state.modelId = m.id;
                 applyFieldValue("model", m.title);
@@ -2050,7 +2171,7 @@ function setupTradingForm() {
 
     resetAnalyzerIdle();
 
-    window.GTPOTradingLangUpdate = () => {
+    window.jogotoTradingLangUpdate = () => {
         if (state.modelId) updateAnalyzerForModel(state.modelId);
         else resetAnalyzerIdle();
 
